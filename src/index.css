@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: #060b14; }
+body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0a1120; }
+::-webkit-scrollbar-thumb { background: #24395c; border-radius: 8px; border: 2px solid #0a1120; }
+::-webkit-scrollbar-thumb:hover { background: #33496f; }
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
+
+input, select, textarea { color-scheme: dark; }
+
+.fade-in { animation: fade .35s ease both; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.kbd {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 1px 6px; border-radius: 5px;
+  background: #1b2b47; color: #94a3b8; font-size: 10px; font-weight: 600;
+  border: 1px solid rgba(148,163,184,0.15);
+  font-family: 'JetBrains Mono', monospace; min-width: 18px;
+}
+
+.heat-cell { transition: transform .12s ease; }
+.heat-cell:hover { transform: scale(1.15); z-index: 10; }
